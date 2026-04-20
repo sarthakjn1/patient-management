@@ -14,7 +14,8 @@ public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(columnDefinition = "CHAR(36)")
+    @org.hibernate.annotations.UuidGenerator
+    @Column(length = 36)
     private UUID id;
 
     @NotNull
