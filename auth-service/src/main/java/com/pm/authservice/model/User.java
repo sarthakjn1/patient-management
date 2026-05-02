@@ -11,6 +11,8 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @org.hibernate.annotations.UuidGenerator
+    @Column(length = 36)
     private UUID id;
 
     @Column(unique = true, nullable = false)
